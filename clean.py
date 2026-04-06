@@ -13,6 +13,7 @@ MAX_RETRIES = 3          # Maximum retry attempts if API call fails
 
 client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
 
+# you can add your personized prompt here
 SYSTEM_PROMPT = """You are a senior bilingual editorial expert with 20 years of experience, as well as a light novel formatting specialist.
 
 Your task is to perform **deep denoising** and **layout reconstruction** on the Chinese text below, which was generated through OCR and initial translation.
