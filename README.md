@@ -65,6 +65,10 @@ python {workdir}/translate-jp/pdf2image.py
 ### Step5. image to text
 ```
 cd {workdir}/ndlocr-lite/src
-bash img2text.sh
+bash img2txt.sh
 ```
+
+### Step6. merge txt
+merge .txt file into a full .txt file
+
 
