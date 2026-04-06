@@ -19,7 +19,7 @@ python version >= 3.10 (I use 3.12)
 
 ## Tutorial
 ### Step0. Prepare
-1. create a workdir ({workdir})
+1. create a workdir (in this tutorial, we'll refer your path to your workdir as '{workdir}')
 2. download your pdf file and put it in workdir
 3. download all python scripts in this directory and put them in workdir ({workdir}/translate-jp)
 4. create a conda environment of python >= 3.10
@@ -90,7 +90,7 @@ You can use your own translate method. Here we'll use immersive translate (https
 The translated document still contains many issues, such as disorganized formatting and extraneous margin text, making further cleaning necessary.
 ```
 pip install openai
-python clean.py
+python {workdir}/translate-jp/clean.py
 ```
 
 
