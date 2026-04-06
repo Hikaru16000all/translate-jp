@@ -1,8 +1,8 @@
 import os
 
 # Configure paths
-ocr_results_dir = os.path.expanduser("~/Vtuber/ocr_results")
-output_file = os.path.expanduser("~/Vtuber/all_vtuber_text_combined.txt")
+ocr_results_dir = os.path.expanduser("{workdir}/ocr_results") # replace {workdir} with real path
+output_file = os.path.expanduser("{workdir}/txt_combined.txt") # replace {workdir} with real path
 
 def merge_txt_files():
     total_merged = 0
