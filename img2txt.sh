@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Base directories
-INPUT_BASE=~/Vtuber/images_output
-OUTPUT_BASE=~/Vtuber/ocr_results
+INPUT_BASE={workdir}/images_output # replace {workdir} with your real path
+OUTPUT_BASE={workdir}/ocr_results # replace {workdir} with your real path
 
 # Create main output directory if it does not exist
 mkdir -p "$OUTPUT_BASE"
