@@ -6,6 +6,10 @@ How to Translate Vertical Japanese PDF Books (Step-by-Step Guide)
 https://github.com/ndl-lab/ndlocr-lite
 ### pdf2image
 https://github.com/Belval/pdf2image
+### immersive translate
+https://immersivetranslate.com/en/
+### pdf 24 tools
+https://tools.pdf24.org/zh/split-pdf
 ### openai (Optional)
 https://github.com/openai/openai-python
 ### Others
@@ -21,4 +25,34 @@ python version >= 3.10 (I use 3.12)
    ```python
    conda create -n translate-jp python=3.12
    ```
-### Step1. Download ndlocr-lite
+### Step1. Install ndlocr-lite
+There are two ways to download ndlocr-lite
+1. git clone https://github.com/ndl-lab/ndlocr-lite
+2. download .zip file (https://github.com/ndl-lab/ndlocr-lite/archive/refs/heads/master.zip) and then unzip
+after downloading
+```python
+cd ndlocr-lite
+conda activate translate-jp
+pip install -r requirements.txt
+cd src
+```
+there might be some dependency conflicts, but if running
+```python
+python ocr.py --help
+```
+successful, then it would not be a problem.
+### Step2. Install pdf2image
+```python
+pip install pdf2image
+```
+### Step3. split pdf
+We'll split your pdf file into small pdf files per page.  
+Use pdf 24 tools (https://tools.pdf24.org/zh/split-pdf)  
+You'll get a .zip dir file, unzip it and load it to your workdir ({workdir}/pdf).
+
+### Step4. pdf to image
+Because ndlocr-lite only recognize image file, we'll turn pdf into image.  
+```python
+python translate-jp/pdf2image.py
+```
+
