@@ -2,7 +2,7 @@ import os
 from pdf2image import convert_from_path
 
 # Configure paths
-base_dir = os.path.expanduser("~/Vtuber")
+base_dir = os.path.expanduser("{workdir}") # replace {workdir} with your real path
 pdf_dir = os.path.join(base_dir, "pdf")
 image_main_dir = os.path.join(base_dir, "images_output")
 
