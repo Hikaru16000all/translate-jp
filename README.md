@@ -26,9 +26,15 @@ python version >= 3.10 (I use 3.12)
    conda create -n translate-jp python=3.12
    ```
 ### Step1. Install ndlocr-lite
+```
+cd {wordir}
+```
 There are two ways to download ndlocr-lite
-1. git clone https://github.com/ndl-lab/ndlocr-lite
-2. download .zip file (https://github.com/ndl-lab/ndlocr-lite/archive/refs/heads/master.zip) and then unzip
+1. run
+   ```
+   git clone https://github.com/ndl-lab/ndlocr-lite
+   ```
+2. download .zip file (https://github.com/ndl-lab/ndlocr-lite/archive/refs/heads/master.zip) and then unzip and load it to your wrokdir.  
 after downloading
 ```python
 cd ndlocr-lite
@@ -53,6 +59,12 @@ You'll get a .zip dir file, unzip it and load it to your workdir ({workdir}/pdf)
 ### Step4. pdf to image
 Because ndlocr-lite only recognize image file, we'll turn pdf into image.  
 ```python
-python translate-jp/pdf2image.py
+python {workdir}/translate-jp/pdf2image.py
+```
+
+### Step5. image to text
+```
+cd {workdir}/ndlocr-lite/src
+bash img2text.sh
 ```
 
