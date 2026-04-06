@@ -6,14 +6,15 @@ How to Translate Vertical Japanese PDF Books (Step-by-Step Guide)
 https://github.com/ndl-lab/ndlocr-lite
 ### pdf2image
 https://github.com/Belval/pdf2image
-### immersive translate
-https://immersivetranslate.com/en/
 ### pdf 24 tools
 https://tools.pdf24.org/zh/split-pdf
 ### openai (Optional)
 https://github.com/openai/openai-python
+### Api (Optional)
+an api key of LLM (e.g. Deepseek (most cost-effective), Claude (best performance), doubao (cheapest))
+### immersive translate (Optional)
+https://immersivetranslate.com/en/
 ### Others
-an api key of LLM (e.g. Deepseek (most cost-effective), Claude (best performance), doubao (cheapest))  
 python version >= 3.10 (I use 3.12)
 
 ## Tutorial
@@ -70,5 +71,26 @@ bash img2txt.sh
 
 ### Step6. merge txt
 merge .txt file into a full .txt file
+```
+python mergetxt.py
+```
+
+### Step7. translate
+You can use your own translate method. Here we'll use immersive translate (https://immersivetranslate.com/en/).  
+1. download google extension of immersive translate.
+2. enter https://dash.immersivetranslate.com/#services
+3. choose 'Add Custom Translation Service' adn confirm.
+4. Add Custom Translation Service (depend on what api you use)
+5. fill your api key and choose 'Paraphrase Expert' in 'You can designate an AI expert to provide translation strategies.：' option.
+6. Verify sevice
+7. enter https://app.immersivetranslate.com/ and choose Document Translation.
+8. upload your .txt file and done!
+
+### Step8. clean (Optional)
+The translated document still contains many issues, such as disorganized formatting and extraneous margin text, making further cleaning necessary.
+```
+pip install openai
+python clean.py
+```
 
 
